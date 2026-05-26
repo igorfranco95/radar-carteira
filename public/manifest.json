@@ -1,6 +1,6 @@
 {
-  "name": "Radar de Carteira",
-  "short_name": "Radar",
+  "name": "Radar Carteira Igor",
+  "short_name": "Radar Igor",
   "description": "Acompanhe sua carteira de ações B3 com análise diária",
   "start_url": "./",
   "display": "standalone",
