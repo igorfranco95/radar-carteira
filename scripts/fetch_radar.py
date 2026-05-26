@@ -108,7 +108,7 @@ def generate_summary(quotes, news):
         return "Chave GEMINI_API_KEY não configurada."
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.0-flash")
 
     pos = [q for q in quotes if q["change_pct"] >= 0]
     neg = [q for q in quotes if q["change_pct"] < 0]
