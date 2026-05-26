@@ -103,12 +103,13 @@ def fetch_news():
 
 
 def generate_summary(quotes, news):
+    import time
+
     api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
         return "Chave GEMINI_API_KEY não configurada."
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-2.0-flash")
 
     pos = [q for q in quotes if q["change_pct"] >= 0]
     neg = [q for q in quotes if q["change_pct"] < 0]
@@ -145,11 +146,20 @@ Contexto de Mercado
 
 Seja direto, objetivo, máximo 300 palavras. Não use asteriscos nem hashtags."""
 
-    try:
-        resp = model.generate_content(prompt)
-        return resp.text
-    except Exception as e:
-        return f"Erro ao gerar resumo Gemini: {e}"
+    # Try models in order — all free tier
+    models = ["gemini-2.0-flash-lite", "gemini-1.5-flash-latest", "gemini-1.0-pro"]
+    for model_name in models:
+        try:
+            print(f"  Tentando modelo: {model_name}")
+            time.sleep(3)  # avoid rate limit between retries
+            model = genai.GenerativeModel(model_name)
+            resp = model.generate_content(prompt)
+            print(f"  OK com {model_name}")
+            return resp.text
+        except Exception as e:
+            print(f"  Falhou {model_name}: {e}")
+
+    return "Resumo indisponível no momento — cotações e notícias acima estão atualizadas."
 
 
 def main():
