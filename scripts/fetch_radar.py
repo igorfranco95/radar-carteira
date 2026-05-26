@@ -147,11 +147,11 @@ Contexto de Mercado
 Seja direto, objetivo, máximo 300 palavras. Não use asteriscos nem hashtags."""
 
     # Try models in order — all free tier
-    models = ["gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-1.5-flash"]
+    models = ["gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-2.0-flash-exp"]
     for model_name in models:
         try:
             print(f"  Tentando modelo: {model_name}")
-            time.sleep(3)  # avoid rate limit between retries
+            time.sleep(10)  # avoid rate limit between retries
             resp = client.models.generate_content(
                 model=model_name,
                 contents=prompt
