@@ -51,6 +51,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          VITE_BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
         run: npm run build
 
       - name: Configure Pages
