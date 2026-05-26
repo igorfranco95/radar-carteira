@@ -5,6 +5,8 @@ on:
     # 08:30 BRT = 11:30 UTC (BRT = UTC-3). Roda seg-sex.
     - cron: '30 11 * * 1-5'
   workflow_dispatch: # permite rodar manualmente para testar
+  push:
+    branches: [main] # deploy automático a cada mudança de código
 
 permissions:
   contents: read
