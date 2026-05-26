@@ -1,0 +1,42 @@
+{
+  "date": "25/05/2026",
+  "generated_at": "2026-05-25T11:30:00.000Z",
+  "market": {
+    "ibovespa": { "value": 128547, "change_pct": 0.42 },
+    "usd_brl": { "value": 5.14, "change_pct": -0.31 }
+  },
+  "quotes": [
+    { "ticker": "PETR4", "name": "Petrobras", "price": 38.52, "change_pct": 1.24, "prices_5d": [37.20, 37.65, 38.10, 37.90, 38.52] },
+    { "ticker": "VALE3", "name": "Vale", "price": 65.10, "change_pct": -0.83, "prices_5d": [66.50, 66.10, 65.80, 65.40, 65.10] },
+    { "ticker": "ITUB3", "name": "Itaú Unibanco", "price": 36.44, "change_pct": 0.55, "prices_5d": [36.00, 36.10, 36.20, 36.30, 36.44] },
+    { "ticker": "BBAS3", "name": "Banco do Brasil", "price": 27.30, "change_pct": 0.33, "prices_5d": [27.10, 27.15, 27.20, 27.25, 27.30] },
+    { "ticker": "BBSE3", "name": "BB Seguridade", "price": 38.80, "change_pct": -0.26, "prices_5d": [39.10, 39.05, 38.95, 38.85, 38.80] },
+    { "ticker": "BRKM5", "name": "Braskem", "price": 18.92, "change_pct": -2.11, "prices_5d": [19.80, 19.60, 19.30, 19.05, 18.92] },
+    { "ticker": "CSAN3", "name": "Cosan", "price": 9.85, "change_pct": 1.76, "prices_5d": [9.50, 9.55, 9.68, 9.75, 9.85] },
+    { "ticker": "CVCB3", "name": "CVC Brasil", "price": 3.42, "change_pct": -1.44, "prices_5d": [3.60, 3.55, 3.50, 3.45, 3.42] },
+    { "ticker": "ABCB4", "name": "BCO ABC Brasil", "price": 22.15, "change_pct": 0.68, "prices_5d": [21.90, 21.95, 22.00, 22.10, 22.15] },
+    { "ticker": "B3SA3", "name": "B3", "price": 11.08, "change_pct": 0.18, "prices_5d": [11.00, 11.02, 11.04, 11.06, 11.08] },
+    { "ticker": "BHIA3", "name": "Casas Bahia", "price": 2.91, "change_pct": -3.32, "prices_5d": [3.10, 3.05, 3.00, 2.95, 2.91] },
+    { "ticker": "GFSA3", "name": "Gafisa", "price": 5.40, "change_pct": 2.08, "prices_5d": [5.15, 5.20, 5.25, 5.35, 5.40] },
+    { "ticker": "ISAE4", "name": "ISA Energia", "price": 19.22, "change_pct": -0.41, "prices_5d": [19.40, 19.38, 19.30, 19.25, 19.22] },
+    { "ticker": "KLBN11", "name": "Klabin", "price": 23.10, "change_pct": 0.44, "prices_5d": [22.90, 22.95, 23.00, 23.05, 23.10] },
+    { "ticker": "KLBN4", "name": "Klabin PN", "price": 22.80, "change_pct": 0.35, "prices_5d": [22.60, 22.65, 22.70, 22.75, 22.80] },
+    { "ticker": "MDIA3", "name": "M.Dias Branco", "price": 31.44, "change_pct": -0.60, "prices_5d": [31.80, 31.70, 31.60, 31.50, 31.44] },
+    { "ticker": "SLCE3", "name": "SLC Agrícola", "price": 20.88, "change_pct": 1.26, "prices_5d": [20.40, 20.50, 20.65, 20.75, 20.88] },
+    { "ticker": "VIVA3", "name": "Vivara", "price": 28.60, "change_pct": 0.91, "prices_5d": [28.10, 28.20, 28.35, 28.50, 28.60] }
+  ],
+  "news": [
+    { "ticker": "PETR4", "title": "Petrobras mantém dividendos acima do mínimo e mercado reage positivamente", "published": "25/05/2026" },
+    { "ticker": "VALE3", "title": "Vale anuncia nova redução de custos operacionais nas minas do Pará", "published": "25/05/2026" },
+    { "ticker": "BRKM5", "title": "Braskem sofre com alta do nafta e revisão de guidance preocupa analistas", "published": "25/05/2026" },
+    { "ticker": "BHIA3", "title": "Casas Bahia registra queda de volume e preocupa com liquidez de curto prazo", "published": "25/05/2026" },
+    { "ticker": "CSAN3", "title": "Cosan avança na reestruturação da Raízen e eleva perspectivas de 2026", "published": "25/05/2026" },
+    { "ticker": "BBAS3", "title": "Banco do Brasil mantém ROE acima de 20% e reafirma guidance do ano", "published": "25/05/2026" },
+    { "ticker": "ITUB3", "title": "Itaú Unibanco cresce 12% em crédito e supera expectativas do mercado", "published": "25/05/2026" },
+    { "ticker": "SLCE3", "title": "SLC Agrícola eleva área plantada e projeta safra recorde em 2026", "published": "25/05/2026" }
+  ],
+  "summary": "Visão Geral\nA carteira apresenta desempenho misto nesta segunda-feira, com leve viés positivo. Das 18 ações monitoradas, 11 operam em alta e 7 em queda, refletindo o ambiente de seletividade que predomina no mercado após os dados de inflação divulgados na sexta-feira. O Ibovespa acompanha a tendência com alta de 0,42%.\n\nDestaques Positivos\n- GFSA3 +2,08%: Gafisa sobe com notícias de novos lançamentos no segmento médio-padrão em São Paulo.\n- CSAN3 +1,76%: Cosan valoriza após avanço na reestruturação da Raízen e perspectivas melhores para o segmento de combustíveis.\n- PETR4 +1,24%: Petrobras continua em evidência positiva após confirmação de dividendos acima do mínimo estatutário.\n\nPontos de Atenção\n- BHIA3 -3,32%: Casas Bahia cai forte com preocupações sobre liquidez e queda no volume de vendas.\n- BRKM5 -2,11%: Braskem pressionada pela alta do nafta no mercado internacional e revisão de guidance.\n- CVCB3 -1,44%: CVC segue pressionada pelo cenário de juros elevados que impactam o crédito ao consumidor.\n\nContexto de Mercado\nO dólar recua 0,31% frente ao real, favorecendo commodities e empresas com receita em moeda estrangeira como VALE3 e PETR4. O ambiente externo mais favorável, com queda nos yields dos Treasuries americanos, contribui para o fluxo de capital em mercados emergentes. Setores de consumo doméstico seguem sob pressão diante da manutenção da Selic em patamar restritivo.",
+  "positive_count": 11,
+  "negative_count": 7,
+  "portfolio_count": 18
+}

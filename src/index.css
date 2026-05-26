@@ -1,0 +1,33 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0A0A0A;
+  --surface:   #111214;
+  --surface2:  #18191C;
+  --border:    #2A2A2F;
+  --orange:    #F5A623;
+  --green:     #00D4AA;
+  --red:       #FF4444;
+  --white:     #F0F0F0;
+  --gray:      #8A8A8A;
+  --gray-dim:  #444;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+#root {
+  min-height: 100dvh;
+}
