@@ -14,6 +14,10 @@ const icons = [
 ]
 
 for (const { size, file } of icons) {
-  await sharp(svg).resize(size, size).png().toFile(join(root, 'public', file))
+  await sharp(svg)
+    .resize(size, size)
+    .flatten({ background: '#0A0A0A' })  // remove alpha, fundo preto sólido
+    .png()
+    .toFile(join(root, 'public', file))
   console.log(`  ✓ ${file}`)
 }
