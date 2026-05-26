@@ -44,7 +44,7 @@ def fetch_quotes():
     for ticker, name in PORTFOLIO.items():
         try:
             t = yf.Ticker(f"{ticker}.SA")
-            hist = t.history(period="7d")
+            hist = t.history(period="7d", auto_adjust=False)
             if hist.empty:
                 continue
             closes = [round(float(v), 2) for v in hist["Close"].tolist()]
