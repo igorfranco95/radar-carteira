@@ -7,7 +7,7 @@ import json
 import os
 from datetime import datetime
 
-from google import genai
+import requests as http_requests
 
 PORTFOLIO = {
     "ABCB4":  "BCO ABC Brasil",
@@ -103,13 +103,9 @@ def fetch_news():
 
 
 def generate_summary(quotes, news):
-    import time
-
-    api_key = os.environ.get("GEMINI_API_KEY", "")
+    api_key = os.environ.get("GROQ_API_KEY", "")
     if not api_key:
-        return "Chave GEMINI_API_KEY não configurada."
-
-    client = genai.Client(api_key=api_key)
+        return "Chave GROQ_API_KEY não configurada."
 
     pos = [q for q in quotes if q["change_pct"] >= 0]
     neg = [q for q in quotes if q["change_pct"] < 0]
@@ -146,18 +142,29 @@ Contexto de Mercado
 
 Seja direto, objetivo, máximo 300 palavras. Não use asteriscos nem hashtags."""
 
-    # Try models in order — all free tier
-    models = ["gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-2.0-flash-exp"]
+    # Try Groq models in order — all free tier
+    models = ["llama-3.3-70b-versatile", "llama3-8b-8192", "gemma2-9b-it"]
     for model_name in models:
         try:
             print(f"  Tentando modelo: {model_name}")
-            time.sleep(10)  # avoid rate limit between retries
-            resp = client.models.generate_content(
-                model=model_name,
-                contents=prompt
+            resp = http_requests.post(
+                "https://api.groq.com/openai/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": model_name,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 600,
+                    "temperature": 0.7,
+                },
+                timeout=30,
             )
+            resp.raise_for_status()
+            text = resp.json()["choices"][0]["message"]["content"]
             print(f"  OK com {model_name}")
-            return resp.text
+            return text
         except Exception as e:
             print(f"  Falhou {model_name}: {e}")
 
